@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>认证中心登录界面</title>
+</head>
+<body>
+    <form action="#" th:action="@{/login}" th:object="${userInfo}" method="post">
+        <input type="hidden" th:field="*{redirectUrl}">
+        用户名：<input type="text" th:field="*{username}" /><br>
+        密码：<input type="text" th:field="*{password}" />
+        <input type="submit" />
+    </form>
+</body>
+</html>
